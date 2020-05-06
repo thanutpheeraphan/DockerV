@@ -8,6 +8,7 @@ from PySide2 import QtUiTools
 
 from button1_widget import UIWindow
 from ui_mainwindow import Ui_MainWindow
+from pyside_material import apply_stylesheet
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -52,6 +53,7 @@ class MainWindow(QMainWindow):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
+    apply_stylesheet(app, theme='light_cyan.xml',light_secondary=True)
     window.show()
 
     sys.exit(app.exec_())
